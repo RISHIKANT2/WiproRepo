@@ -1,0 +1,22 @@
+1. What is Java?
+
+Answer:
+Java is a high-level, object-oriented, platform-independent programming language developed by Sun Microsystems (now owned by Oracle). It follows the principle of “Write Once, Run Anywhere” using the JVM.
+
+2. What are the main features of Java?
+
+Answer:
+
+Object-Oriented
+Platform Independent
+Secure
+Robust
+Multithreaded
+High Performance (via JIT compiler)
+3. What is JVM, JRE, and JDK?
+
+Answer:
+
+JVM (Java Virtual Machine): Executes Java bytecode
+JRE (Java Runtime Environment): Provides libraries + JVM
+JDK (Java Development Kit): JRE + development tools (compiler, debugger)

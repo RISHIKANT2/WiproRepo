@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+       <bean class="com.wipro.DIproject.Address" id="addressObj">
+       <property name="city" value="Bokaro Steel City" />
+       </bean>
+       <bean class="com.wipro.DIproject.Student" id="StdObj">
+       <constructor-arg value="rishikant"/>
+       <constructor-arg value="32"/>
+       <constructor-arg ref="addressObj"/>
+       
+       </bean>
+       
+      </beans>

@@ -23,9 +23,11 @@ pipeline {
             }
         }
         stage('Health Check') {
-          steps {
-             bat 'health_check.bat'
-          }
-       }
+            steps {
+                dir('MetroRide-Java-API') {
+                    bat '.\\health_check.bat'
+                }
+            }
+        }
     }
 }

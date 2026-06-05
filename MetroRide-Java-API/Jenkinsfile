@@ -22,5 +22,10 @@ pipeline {
                 archiveArtifacts artifacts: 'MetroRide-Java-API/build/libs/*.jar', fingerprint: true
             }
         }
+        stage('Health Check') {
+          steps {
+             bat 'health_check.bat'
+          }
+       }
     }
 }

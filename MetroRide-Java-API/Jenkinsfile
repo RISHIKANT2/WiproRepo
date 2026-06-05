@@ -1,7 +1,14 @@
 pipeline {
     agent any
 
+    environment {
+        IMAGE_NAME = "metroride-api"
+        DOCKER_USER = "rishikant2"
+        DOCKER_IMAGE = "${DOCKER_USER}/${IMAGE_NAME}"
+    }
+
     stages {
+
         stage('Checkout Code') {
             steps {
                 git branch: 'feature/build-setup',
@@ -9,10 +16,18 @@ pipeline {
             }
         }
 
+        stage('Health Check') {
+            steps {
+                dir('MetroRide-Java-API') {
+                    bat '.\\health_check.bat'
+                }
+            }
+        }
+
         stage('Gradle Build') {
             steps {
                 dir('MetroRide-Java-API') {
-                    bat 'gradlew.bat clean build'
+                    bat '.\\gradlew.bat clean build'
                 }
             }
         }
@@ -22,11 +37,24 @@ pipeline {
                 archiveArtifacts artifacts: 'MetroRide-Java-API/build/libs/*.jar', fingerprint: true
             }
         }
-        stage('Health Check') {
+
+        stage('Docker Build') {
             steps {
                 dir('MetroRide-Java-API') {
-                    bat '.\\health_check.bat'
+                    bat 'docker build -t %DOCKER_IMAGE%:latest .'
                 }
+            }
+        }
+
+        stage('Docker Login') {
+            steps {
+                echo 'Docker login mock completed successfully'
+            }
+        }
+
+        stage('Docker Push') {
+            steps {
+                echo 'Docker push mock completed successfully'
             }
         }
     }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.metroride.MetroRide_Java_API.MetroRideJavaApiApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-06-05T08:29:23.727Z" hostname="LOCALHOST" time="4.356">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.metroride.MetroRide_Java_API.MetroRideJavaApiApplicationTests" time="1.215"/>
+  <system-out><![CDATA[13:59:24.041 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.metroride.MetroRide_Java_API.MetroRideJavaApiApplicationTests]: MetroRideJavaApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:59:24.208 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.metroride.MetroRide_Java_API.MetroRideJavaApiApplication for test class com.metroride.MetroRide_Java_API.MetroRideJavaApiApplicationTests
+13:59:24.387 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.metroride.MetroRide_Java_API.MetroRideJavaApiApplicationTests]: MetroRideJavaApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:59:24.390 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.metroride.MetroRide_Java_API.MetroRideJavaApiApplication for test class com.metroride.MetroRide_Java_API.MetroRideJavaApiApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-06-05T13:59:24.929+05:30  INFO 10020 --- [MetroRide-Java-API] [    Test worker] c.m.M.MetroRideJavaApiApplicationTests   : Starting MetroRideJavaApiApplicationTests using Java 17.0.12 with PID 10020 (started by rishi in C:\Users\rishi\Downloads\MetroRide-Java-API\MetroRide-Java-API)
+2026-06-05T13:59:24.933+05:30  INFO 10020 --- [MetroRide-Java-API] [    Test worker] c.m.M.MetroRideJavaApiApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2026-06-05T13:59:26.833+05:30  INFO 10020 --- [MetroRide-Java-API] [    Test worker] c.m.M.MetroRideJavaApiApplicationTests   : Started MetroRideJavaApiApplicationTests in 2.336 seconds (process running for 4.853)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

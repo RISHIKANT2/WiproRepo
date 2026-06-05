@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout Code') {
+            steps {
+                git branch: 'feature/build-setup',
+                url: 'https://github.com/RISHIKANT2/WiproRepo.git'
+            }
+        }
+
+        stage('Maven Build') {
+            steps {
+                bat 'mvn clean package'
+            }
+        }
+
+        stage('Archive JAR') {
+            steps {
+                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+            }
+        }
+    }
+}

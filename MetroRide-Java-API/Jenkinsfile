@@ -2,23 +2,24 @@ pipeline {
     agent any
 
     stages {
-
         stage('Checkout Code') {
             steps {
                 git branch: 'feature/build-setup',
-                url: 'https://github.com/RISHIKANT2/WiproRepo.git'
+                    url: 'https://github.com/RISHIKANT2/WiproRepo.git'
             }
         }
 
-        stage('Maven Build') {
+        stage('Gradle Build') {
             steps {
-                bat 'mvn clean package'
+                dir('MetroRide-Java-API') {
+                    bat 'gradlew.bat clean build'
+                }
             }
         }
 
         stage('Archive JAR') {
             steps {
-                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                archiveArtifacts artifacts: 'MetroRide-Java-API/build/libs/*.jar', fingerprint: true
             }
         }
     }
